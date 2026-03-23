@@ -1,0 +1,5 @@
+print("Dynamically typed")
+print("object oriented programing")
+print("Extensive library ")
+print("open source and free")
+print("large community")

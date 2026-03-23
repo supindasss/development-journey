@@ -1,0 +1,6 @@
+print("web development")
+print("datascience and ML")
+print("AI")
+print("IOT")
+print("BIgdata")
+print("Game development")

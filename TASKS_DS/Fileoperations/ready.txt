@@ -1,0 +1,8 @@
+malayalam
+English
+hindi
+tamil
+thelugu
+kannada
+marathi
+gujrati

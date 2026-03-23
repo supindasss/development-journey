@@ -1,0 +1,6 @@
+1000,vipin,hr,25000
+1001,jipin,hr,27000
+1002,dipin,qa,28000
+1003,sipin,qa,35000
+1004,niche,hr,35000
+1005,joobin,ba,45000

@@ -1,0 +1,20 @@
+"""Task 15 || Pattern || 06-02-2026
+13.Hollow Inverted fullpyramid """
+for i in range(1,6):
+    for j in range(1,6-i):
+        print(" ",end="")
+    for k in range(1,i+i):
+        if k==1 or k==i:
+            print("*",end=" ")  
+        else:
+            print(" ",end=" ")
+    print()
+for i in range(4,0,-1):
+    for j in range(1,6-i):
+        print(" ",end="")
+    for k in range(1,i+1):
+        if k==1 or k==i:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()                                 
