@@ -28,12 +28,19 @@ tips_data = [
 ]
 #day wise summary
 day_wise_summary={}
+
 for line in tips_data:
+
     tip=float(line.get("tip"))
+
     day=line.get("day")
+
     if day in  day_wise_summary:
+
         day_wise_summary[day]+=tip
+
     else:
+
         day_wise_summary[day]=tip 
 
 print(f"day wise summary ={day_wise_summary}")
@@ -42,13 +49,17 @@ print(f"day wise summary ={day_wise_summary}")
 
 highest_revanue={}
 
-for d in tips_data:
-    total_bill=float(d.get("total_bill"))
-    day=d.get("day")
+for line in tips_data:
+
+    total_bill=float(line.get("total_bill"))
+
+    day=line.get("day")
 
     if day in highest_revanue:
+
         highest_revanue[day]+=total_bill
     else:
+
         highest_revanue[day]=total_bill
 #print only highest paid day        
 max_revanue_day=max([[v,k] for k,v in highest_revanue.items()])
@@ -58,17 +69,71 @@ print("highest paid day=",max_revanue_day)
 
 hihest_tip={}
 
-for g in tips_data:
-    tipp=float(g.get("tip"))
-    gen=g.get("sex")
+for line in tips_data:
+
+    tipp=float(line.get("tip"))
+
+    gen=line.get("sex")
 
     if gen in hihest_tip:
+
         hihest_tip[gen]+=tipp
+
     else:
+
         hihest_tip[gen]=tipp   
 
 max_tip=max([[v,k] for k,v in hihest_tip.items()])
+
 print("highest tip =",max_tip)
+
+# count the smokers with time in dinner
+
+
+count=0
+
+for line in tips_data:
+
+    dinner=line.get("time")
+    smoker=line.get("smoker")
+
+    if dinner=="Dinner" and smoker=="Yes":
+
+        count=count+1
+
+print("no of smokers at the time of dinner",count)        
+
+# time of day (Lunch vs Dinner) with the highest total tips
+
+Lunch_vs_dinner={}
+
+for line in tips_data:
+
+    dtime=line.get("time")
+    dltip=float(line.get("tip"))
+    
+    if dtime in Lunch_vs_dinner:
+
+        Lunch_vs_dinner[dtime]+=dltip
+
+    else:
+        Lunch_vs_dinner[dtime]=dltip  
+
+print(f"During the time of lunch and dinner is = {Lunch_vs_dinner}") 
+
+print("The maximu tip goted = ",max(Lunch_vs_dinner.items(),key=lambda n:n[1]))
+
+
+    
+ 
+
+
+
+    
+
+
+
+
 
 
 

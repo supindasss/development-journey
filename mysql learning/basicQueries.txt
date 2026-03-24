@@ -1,0 +1,71 @@
+==query for listing all databases==
+
+>show database;
+
+==query for creating new database==
+
+>create database database_name
+
+==query for switch in to database
+
+>use database;
+
+student[id(int),name(varchar),course(varchar),age(int),place(varchar),email(varchar),is_active(bool)]
+
+==query for creating table==
+
+>create table table_name(
+    coloumn_name datatype constraint,
+)
+
+eg: create table student(
+    id int auto_increment PRIMARY KEY,
+    name varchar(70) not null,
+    course enum("django","mern","testing","ds","asp") default "django"
+    place varchar(70) null,
+    email varchar(70) unique,
+    age int notnull,
+);
+
+python==>int,float,string,boolean,list,set,tuple,dictionary
+mysql==>int,float,decimal,varchar(size),char(size),date,bool,enum(choice1,choice2,choice3)==>gender enum("male",Male,MALE)
+
+constraints :
+
+NULL=> nullable pinne cheythaalum mathi
+
+NOT NULL=> mandatory admission timil student name must aanu
+
+QNIQUE=>no duplicates eg(email)
+
+AUTO INCRIMENT=> for incrementing
+
+DEFAULT=> default value
+
+check =>
+
+KEYS:
+
+primary KEYS==>we can set any coloumn as a primary key to get one unique record from the table
+foriegn KEYS
+
+employee[id,name,department,salary,location]
+
+create table employee(
+    id int auto_increment primary key,
+    name varchar(20) notnull,
+    department varchar(20) notnull,
+    salary int default 15000,
+    location varchar(50) notnull
+)
+
+==query for  inserting records ==
+
+> insert into table_name(filed1,field12,field3,field3) values (value1,value2,value3)
+
+insert in to student(name,course,place,email,age) values ("supindas","ds","palakkad","supin@gmail.com",22)
+
+
+
+
+
