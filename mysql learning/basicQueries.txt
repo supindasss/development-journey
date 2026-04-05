@@ -65,6 +65,27 @@ create table employee(
 
 insert in to student(name,course,place,email,age) values ("supindas","ds","palakkad","supin@gmail.com",22)
 
+== query for print table where the name start with perticular charcter==
+
+select *from employee where name like "h%"==>finding i it start
+select *from employee whwre name like "%h"==>calculating if it end with h
+
+==query for sorting numbers like ages ==
+
+select *from employee order by age;==>for printing asscenting order
+select *from employee order by age desc;==>for arranging descenting order
+
+==limit and offest==
+
+select * from student limit 3==>only printing threee lines
+
+select * from student order by age desc limit 1 offest 1;===> skipping the first line of data & displays 2nd row data only
+select * from stuydent order by age desc limit 1 offest 2;===>skipping fisrt 2 line and displays 3rd rows data only 
+
+===aggregate functions max(),min(),sum(),avg(),count()
+
+select max(age) from student;
+
 
 
 
