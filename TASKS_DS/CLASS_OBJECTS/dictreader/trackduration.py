@@ -27,6 +27,7 @@ class TrackDuration:
 
             self.du_in_minutes=self.duration_in_ms/60000
 
+
             list={"Name":self.Trackname,"minutes":self.du_in_minutes}
 
             print(list)
